@@ -23,7 +23,7 @@ echo '/dev/data/volume1 /var/lib/jenkins ext4 defaults 0 0' >> /etc/fstab
 mount /var/lib/jenkins
 # install dependencies
 #apt-get install -y python3
-amazon-linux-extras install -y java-openjdk11 awscli1 docker python3
+amazon-linux-extras install -y java-openjdk11 awscli1 docker
 # jenkins repository
 wget -O /etc/yum.repos.d/jenkins.repo https://pkg.jenkins.io/redhat/jenkins.repo
 rpm --import https://pkg.jenkins.io/redhat-stable/jenkins.io.key
