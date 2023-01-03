@@ -36,12 +36,12 @@ usermod -G docker jenkins
 systemctl enable --now docker
 systemctl restart jenkins
 # install pip
-wget -q https://bootstrap.pypa.io/get-pip.py
+wget -q https://bootstrap.pypa.io/pip/2.7/get-pip.py
 python get-pip.py
 python3 get-pip.py
 rm -f get-pip.py
 # install awscli
-pip install awscli
+python -m pip install awscli
 # install git, terraform
 yum install -y git yum-utils
 yum-config-manager --add-repo https://rpm.releases.hashicorp.com/AmazonLinux/hashicorp.repo
